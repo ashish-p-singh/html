@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <link rel="stylesheet" href="css.css"><!--this is external css-->
+</head>
+
+<body>
+    <style>
+        #heading {
+	color:
+		blue;
+	background-color:
+		rgb(228,
+			228,
+			13);
+}
+
+h2,
+h3,
+h4 {
+	text-align:
+		right;
+	color:
+		green;
+	font-family:
+		Arial,
+		Helvetica,
+		sans-serif;
+	font-weight:
+		900;
+}
+
+img {
+	opacity:
+		0.0;
+}
+
+img:hover {
+	opacity:
+		1.0
+}
+
+table,
+tr,
+td,
+th {
+	text-decoration:
+		underline;
+	color:
+		blue;
+	border:
+		5px solid red;
+	border-radius:
+		5px;
+	padding:
+		5px;
+}
+
+td:hover {
+	border-color:
+		green;
+}
+
+input {
+	border-radius: 5px;
+	border-color:
+		aqua;
+	color:
+		rgb(43,
+			79,
+			79);
+	font-family:
+		fantasy;
+	padding:
+		5px;
+}
+    </style>
+    <h1 id="heading">This is heading 1</h1>
+    <h2>Ashish</h2>
+    <h3>Ashish
+    </h3>
+    <h4 style="color: aqua;font-weight: 400;">Ashish
+    </h4><!--This is inline css-->
+    <h5>Ashish</h5>
+    <h6>Ashish</h6>
+    <p style="background-color: blanchedalmond;color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Vel, obcaecati?
+    </p>
+    <img src="html.png" alt="not showing" width="200px" height="200px">
+    <div class="header">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="content">Lorem ipsum dolor sit amet.</div>
+    <div class="contentleft">Lorem ipsum dolor sit amet.</div>
+    <div class="contentright">Lorem ipsum dolor sit amet.</div>
+    <div class="footer">Lorem ipsum dolor sit amet.</div>
+    <table>
+        <tr>
+            <th colspan="2">Student Details</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>anish</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>arpit</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                akshat
+            </td>
+        </tr>
+
+    </table>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="fname">Enter your First Name:- </label>
+            <input type="text" id="fname" name="fname">
+        </fieldset>
+        <fieldset>
+            <legend>Contacts</legend>
+            <label for="email">Email:- </label>
+            <input type="text" id="email" name="email"><br>
+            <br>
+            <label for="Number">Number:- </label>
+            <input type="text" id="Number" name="Number">
+        </fieldset>
+    </form>
+</body>
+
+</html>

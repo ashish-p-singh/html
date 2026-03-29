@@ -1,0 +1,40 @@
+.header
+{
+    text-align: center;
+    height: 200;
+    width: auto;
+    background-color:bisque;
+    color: rgb(13, 235, 69);
+}
+.content
+{
+    width:auto;
+    height: 300;
+    background-color: black;
+    color: white;
+    text-align: 
+    center;
+}
+.contentleft
+{
+    width: 400;
+    height: 300;
+    text-align: left;
+    background-color: aqua;
+}
+.contentright
+{
+    width: 400;
+    height: 300;
+    text-align: right;
+    background-color: brown;
+    color: yellow;
+}
+.footer
+{
+    width: auto;
+    height: 100;
+    background-color: coral;
+    color: blue;
+    text-align: center;
+}

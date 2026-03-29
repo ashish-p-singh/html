@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <h2>Function demonstration:-</h2>
+    <p id="divison"></p>
+    <p id="area"></p>
+    <p id="greet"></p>
+    <h3>
+        Anonymous Function Example:
+    </h3>
+    <button onclick="(function(){
+        alert('hi')
+    }())">Anonymous</button>
+    <input type="text" id="textBox" onkeyup="convertUpper()" placeholder="Type here to convert to Uppercase">
+    <h4>KeyPressEvent</h4>
+    <input type="text" onkeydown="KeyDownHandler(event)" placeholder="Write Something">
+    <h4>Mouse Events</h4>
+    <button onclick="showAlert()">mouse click</button><br>
+    <div id="hover" onmouseover="mouseOver()" onmouseout="mouseOut()"
+        style="width: 200px; height: 100px; padding:10px; background-color: blue; text-align: center; text-transform: capitalize;">
+        Mouse Events</div>
+    <h4>Click based events</h4>
+    <form onsubmit="return showMessage(event)">
+        <!--onchange()-->
+        <label>Enter your name</label>
+        <input type="text" id="username" onchange="nameChange()" required><br>
+        <!--onclick()-->
+        <button type="submit" onclick="buttonClicked()">submit</button>
+    </form>
+    <p id="changeMsg"></p>
+    <p id="clickMsg"></p>
+    <p id="result"></p>
+    <h4>Fomr based validation check</h4>
+    <!-- <form name="details" onsubmit="return validateForm()">
+        Name:- <input type="text" name="username"><br>
+        email:- <input type="text" name="email"><br>
+        <input type="submit" value="Submit">
+    </form> -->
+    <p>
+    <form onsubmit="return validateForm()">
+        <label for="fname">First Name</label>
+        <input type="text" id="name" name="fname" placeholder="Enter your name" required><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email" required><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+        <label for="confirm password">Confirm Password</label>
+        <input type="password" id="confirm password" name="confirm password" placeholder="Re-enter your password" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    </p>
+    <script src="fn.js"></script>
+</body>
+
+</html>

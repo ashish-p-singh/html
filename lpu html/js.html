@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>Unit 4</title>
+</head>
+<script>
+    function showMessage(){
+        alert("Hello, I am incorporating javascript within head tag.");
+    }
+</script>
+<body>
+   <h3>Script from head tag:-</h3>
+   <button onclick="showMessage()">Click Me!!!</button>
+   <p id="message"></p>
+   <p id="datetime"></p>
+   <script>
+    document.getElementById("message").innerHTML = "Hello it is incorporating javascript using body tag"
+    document.getElementById("datetime").innerHTML = Date();
+   </script>
+</body>
+</html>

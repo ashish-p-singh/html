@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conatiner{
+            border:2px solid yellow;
+        }
+        .active{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h4>Unit 6 demonstration of DOM Element</h4>
+    <p id="msg">Hello</p>
+    <script>
+        document.getElementById("msg").innerHTML="Welcome K25DN"
+    </script>
+    <div id="box" class="conatiner">originl box
+    </div>
+    <button onclick="createElements()">1.createElements</button>
+    <button onclick="appendElements()">2.appendElements</button>
+    <button onclick="prependElement()">3.prependElement</button>
+    <button onclick="changeContent()">4.Change innerHTML1 & textContent</button>
+    <button onclick="changeAttributes()">5.Change Attributes</button>
+    <button onclick="changeStyle()">6.Change Styles</button>
+    <hr>
+    <script>
+        let newPara,newSpan;
+        function createElements(){
+            newPara=document.createElement("p");
+            newPara.textContent="Created with CreateElement" ;
+            newSpan=document.createElement("span");  
+            newSpan.innerHTML="<b>Bold text along with innerHTML</b>";
+            alert("Elements created(paragrph + span)");
+         }
+         function appendElements(){
+            if (!newPara || !newSpan){
+                alert("Create elements first");
+                return;
+            }
+            document.body.appendChild(newPara);
+            newPara.append(" +appended text");
+            document.body.append(newSpan);
+            alert("Pargraph,Span apeended + text added");
+        }
+        function prependElement(){
+            const header = document.createElement("h3");
+            header.textContent="Prepended Header";
+            const box = document.getElementById("box");
+            box.prepend(header);
+            alert("Header prepended to #box");
+        }
+        function changeContent(){
+            const box = document.getElementById("box");
+            box.innerHTML+="<br>innerHTML updted";
+            if (newSpan){
+                newSpan.textContent+="TextContent replaced HTML completely ";
+                document.body.appendChild(newSpan);
+            }
+            alert("innerHTML and textContent updated");
+        }
+        function changeAttributes(){
+            const box = document.getElementById("box");
+            box.setAttribute("class","active");
+            const idValue = box.getAttribute("id");
+            alert("Atrributes changed(class changed) and retrieved id value: " + idValue);
+        }
+        function changeStyle(){
+            const box = document.getElementById("box");
+            box.style.border="5px dashed green";
+            box.style.color="blue";
+            alert("Styles changed(border and color)");
+        }
+          </script>
+    <div  id="box1" style="padding 10px; border:1px solid black">This is a box</div>
+    <button onclick="changeStyles()">Change Multiple Styles</button>
+    <script>
+        function changeStyles(){
+          document.getElementById("box1").style.cssText="color:blue; background-color:yellow; padding:20px; border:2px solid red;";
+        }
+    </script>
+</body>
+</html>

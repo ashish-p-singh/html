@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content= initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2>Representing Conditional Statements in JavaScript</h2>
+   <script>
+    let number = 10;
+    if (number > 0) {
+        console.log("The number is positive.");
+    } else if (number < 0) {
+        console.log("The number is negative.");
+    } else {
+        console.log("The number is zero.");
+    }
+    let day=5;
+    switch(day) {
+        case 1:
+            console.log("Monday");
+            break;
+        case 2:
+            console.log("Tuesday");
+            break;
+        case 3:
+            console.log("Wednesday");
+            break;
+        case 4:
+            console.log("Thursday");
+            break;
+        case 5:
+            console.log("Friday");
+            break;
+        case 6:
+            console.log("Saturday");
+            break;
+        case 7:
+            console.log("Sunday");
+            break;
+        default:
+            console.log("Invalid day");
+    }
+    for (let i = 1; i <= 5; i++) {
+        if (i === 3){
+            console.log("i is equal to 3");
+             continue; 
+        }
+        if (i === 5){
+        console.log("loop will execute till  5");
+            break;
+    }
+        console.log("numbers: ",i);
+    }
+    let i=1;
+    console.log("While Loop:");
+    while (i <= 5) {
+        console.log("numbers: ",i);
+        i++;
+    }
+    console.log("Do-While Loop:");
+    let j = 1;  
+    do {
+        console.log("numbers: ",j);
+        j++;
+    } 
+    while (j <=10)
+    console.log("For loop:- ");
+    for (let s=1;s<=5;s++){
+        console.log("number is:-  ",s);
+    }
+  
+   </script>
+   
+   
+</body>
+</html>

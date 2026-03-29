@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function showAlert() {
+            alert("Hello! This is an alert box.");
+        }
+        function showConfirm() {
+            let result = confirm("Do you want to continue?");
+            if (result) {
+                document.getElementById("output").innerHTML = "You clicked OK!";
+            }
+            else {
+                document.getElementById("output").innerHTML = "You clicked Cancel!";
+            }
+        }
+        function showPrompt() {
+            let name = prompt("What is your name?");
+            if (name) {
+                document.getElementById("PromptOutput").innerHTML = "Hello, " + name + " How are you?";
+            }
+            else {
+                document.getElementById("PropmtOutput").innerHTML = "You did not enter anything ";
+            }
+        }
+    </script>
+    <h2>JavaScript Alert, Confirm, and Prompt Boxes</h2>
+    <button onclick="showAlert()">Alert Box</button><br>
+    <button onclick="showConfirm()">Confirm Box</button><br>
+    <button onclick="showPrompt()">Prompt Box</button>
+    <p id="output"></p>
+    <p id="PromptOutput"></p>
+    <h2>Activity related to prompt pop up box</h2>
+    <button onclick="checkPassword()">Check Authentication</button>
+    <h3 id="status"></h3>
+    <script>
+        function checkPassword() {
+            let pass = prompt("Enter Your Passwor");
+            if (pass === "123456789a") {
+                document.getElementById("status").innerHTML = "Access Granted✅"
+            }
+            else {
+                document.getElementById("status").innerHTML = "Access Denied❌"
+            }
+        }
+    </script>
+    <h2>JavaScript Object properties and methods</h2>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <script>
+        let student = {
+            name: "Ashish",
+            age: 10,
+            course: "Computer Science",
+            greet: function () {
+                return "Hello,my name is" + this.name;
+            }
+        }
+        document.getElementById("output1").innerHTML = "Age: " + student.age;
+        document.getElementById("output2").innerHTML = "Course " + student.course;
+        document.getElementById("output3").innerHTML = "Name " + student.greet();
+    </script>
+</body>
+
+</html>

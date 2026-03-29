@@ -1,0 +1,31 @@
+body{
+    justify-content: center;
+    align-items: center;
+    min-heighjt
+}
+
+.card{
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.img{
+    border-radius: 50%;
+    height: 2px;
+    width: 10px;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    background-color: purple;
+}
+.orange{
+    background-color: orange;
+    color:yellow
+}
