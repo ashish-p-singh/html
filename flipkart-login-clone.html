@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipkart Login Clone</title>
+  <style>
+    :root {
+      --fk-blue: #2874f0;
+      --fk-orange: #fb641b;
+      --text-dark: #212121;
+      --text-muted: #878787;
+      --line: #e0e0e0;
+      --bg: #f1f3f6;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Roboto, Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 16px;
+    }
+
+    .login-wrap {
+      width: min(840px, 100%);
+      min-height: 520px;
+      background: var(--card);
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+      border-radius: 2px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    .left {
+      background: var(--fk-blue);
+      color: #fff;
+      padding: 42px 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .left h1 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .left p {
+      color: #dbdbdb;
+      line-height: 1.45;
+      font-size: 18px;
+      max-width: 220px;
+    }
+
+    .illustration {
+      opacity: 0.95;
+      align-self: center;
+      width: 170px;
+      height: auto;
+    }
+
+    .right {
+      padding: 56px 40px 34px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      outline: none;
+      padding: 8px 0;
+      font-size: 16px;
+      color: var(--text-dark);
+      background: transparent;
+    }
+
+    label {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      font-size: 16px;
+      color: var(--text-muted);
+      pointer-events: none;
+      transition: 0.2s ease;
+      background: #fff;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: -12px;
+      font-size: 12px;
+      color: var(--fk-blue);
+    }
+
+    .terms {
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .terms a {
+      color: var(--fk-blue);
+      text-decoration: none;
+    }
+
+    .btn-login {
+      border: 0;
+      background: var(--fk-orange);
+      color: #fff;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+      margin-bottom: 18px;
+    }
+
+    .or {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .btn-otp {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--fk-blue);
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+      margin-bottom: auto;
+    }
+
+    .signup {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .signup a {
+      color: var(--fk-blue);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .login-wrap {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .left {
+        min-height: 190px;
+        padding: 24px;
+      }
+
+      .left h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .left p {
+        font-size: 15px;
+        max-width: none;
+      }
+
+      .illustration {
+        display: none;
+      }
+
+      .right {
+        padding: 28px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="login-wrap">
+    <section class="left">
+      <div>
+        <h1>Login</h1>
+        <p>Get access to your Orders, Wishlist and Recommendations</p>
+      </div>
+      <svg class="illustration" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="20" y="25" width="120" height="90" rx="8" fill="#fff" opacity="0.16"/>
+        <circle cx="80" cy="65" r="24" fill="#fff" opacity="0.3"/>
+        <rect x="45" y="108" width="70" height="12" rx="6" fill="#fff" opacity="0.3"/>
+        <rect x="50" y="132" width="60" height="10" rx="5" fill="#fff" opacity="0.25"/>
+      </svg>
+    </section>
+
+    <section class="right">
+      <div class="input-group">
+        <input id="email" type="text" placeholder=" " required />
+        <label for="email">Enter Email/Mobile number</label>
+      </div>
+
+      <p class="terms">
+        By continuing, you agree to Flipkart's
+        <a href="#">Terms of Use</a> and
+        <a href="#">Privacy Policy</a>.
+      </p>
+
+      <button class="btn-login" type="button">Request OTP</button>
+
+      <p class="or">OR</p>
+
+      <button class="btn-otp" type="button">Login with Password</button>
+
+      <p class="signup">
+        <a href="#">New to Flipkart? Create an account</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
